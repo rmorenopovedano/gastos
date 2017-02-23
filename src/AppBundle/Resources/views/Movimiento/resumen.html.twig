@@ -1,0 +1,60 @@
+{% extends 'layout.html.twig' %}
+{% block contenido %}
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="text-center">{{ mes }}</h1>
+        </div>
+        <div class="col-md-6">
+            {% if resumen < 0 %}
+                <h2 class="btn-danger text-center padding10px">{{ resumen }} €</h2>
+            {% else %}
+                <h2 class="btn-success text-center padding10px">{{ resumen }} €</h2>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row padding10px text-center">
+        <div class="col-md-3">
+            <a type="button" class="btn btn-danger" href="{{ path('app_movimiento_resumen', {'mes':'Enero'}) }}">Enero</a>
+        </div>
+        <div class="col-md-3">
+            <a type="button" class="btn btn-danger" href="{{ path('app_movimiento_resumen', {'mes':'Febrero'}) }}">Febrero</a>
+        </div>
+        <div class="col-md-3">
+            <a type="submit" class="btn btn-danger" href="{{ path('app_movimiento_resumen', {'mes':'Marzo'}) }}">Marzo</a>
+        </div>
+        <div class="col-md-3">
+            <a type="submit" class="btn btn-danger" href="{{ path('app_movimiento_resumen', {'mes':'Abril'}) }}">Abril</a>
+        </div>
+
+    </div>
+    <div class="row padding10px text-center">
+        <div class="col-md-3">
+            <a type="button" class="btn btn-danger" href="{{ path('app_movimiento_resumen', {'mes':'Mayo'}) }}">Mayo</a>
+        </div>
+        <div class="col-md-3">
+            <a type="button" class="btn btn-danger" href="{{ path('app_movimiento_resumen', {'mes':'Junio'}) }}">Junio</a>
+        </div>
+        <div class="col-md-3">
+            <a type="submit" class="btn btn-danger" href="{{ path('app_movimiento_resumen', {'mes':'Julio'}) }}">Julio</a>
+        </div>
+        <div class="col-md-3">
+            <a type="submit" class="btn btn-danger" href="{{ path('app_movimiento_resumen', {'mes':'Agosto'}) }}">Agosto</a>
+        </div>
+
+    </div>
+    <div class="row padding10px text-center">
+        <div class="col-md-3">
+            <a type="button" class="btn btn-danger" href="{{ path('app_movimiento_resumen', {'mes':'Septiembre'}) }}">Septiembre</a>
+        </div>
+        <div class="col-md-3">
+            <a type="button" class="btn btn-danger" href="{{ path('app_movimiento_resumen', {'mes':'Octubre'}) }}">Octubre</a>
+        </div>
+        <div class="col-md-3">
+            <a type="submit" class="btn btn-danger" href="{{ path('app_movimiento_resumen', {'mes':'Noviembre'}) }}">Noviembre</a>
+        </div>
+        <div class="col-md-3">
+            <a type="submit" class="btn btn-danger" href="{{ path('app_movimiento_resumen', {'mes':'Diciembre'}) }}">Diciembre</a>
+        </div>
+
+    </div>
+{% endblock %}

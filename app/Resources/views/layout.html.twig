@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+        {#header#}
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center">Control de Gastos</h1>
+                    </div>
+                </div>
+        {#nav#}
+        <div class="row">
+            <div class="col-md-3">
+                <nav class="navbar">
+                    <div class="container-fluid">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active"><a href="{{ path('homepage') }}">Lista</a></li>
+                            <li><a href="{{ path('app_movimiento_add') }}">Añadir Movimiento</a></li>
+                            <li><a href="{{ path('app_movimiento_resumen')}}">Resumen Mes</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-9">
+
+
+        {% block contenido %}{% endblock %}
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

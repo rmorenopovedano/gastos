@@ -1,0 +1,37 @@
+{% extends 'layout.html.twig' %}
+{% block contenido %}
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+            <div class="form-group">
+                {{ form_label(form.nombre) }}
+                {{ form_widget(form.nombre, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.descripcion) }}
+                {{ form_widget(form.descripcion, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.cantidad) }}
+                {{ form_widget(form.cantidad, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.mes) }}
+                {{ form_widget(form.mes, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.tipo) }}
+                {{ form_widget(form.tipo, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.add) }}
+                {{ form_widget(form.add, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            {{ form_end(form) }}
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+
+
+{% endblock %}
